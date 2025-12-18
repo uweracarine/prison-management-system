@@ -203,8 +203,39 @@ This project is created for educational purposes as part of a final exam project
 ## Author
 
 Developed as a final exam project for Software Development course.
-
 ---
+
+## Docker
+
+This project can be run with Docker Compose. The repository includes a `docker/php/Dockerfile`, `docker/apache/vhost.conf`, and `docker-compose.yml`.
+
+Quick start (Windows PowerShell):
+
+1. Ensure Docker Desktop is running.
+2. Edit `.env` to change ports or database credentials if needed.
+3. Build and start services:
+
+```powershell
+docker compose up --build -d
+```
+
+Open in your browser:
+
+- App: http://localhost:${APP_PORT:-8082}
+- phpMyAdmin: http://localhost:${PMA_PORT:-8083}
+
+Useful commands:
+
+```powershell
+# View logs
+docker compose logs -f
+
+# Stop services
+docker compose down
+
+# Rebuild and restart
+docker compose up --build -d
+```
 
 **Note**: This is a demonstration project. For production use, additional security measures and optimizations should be implemented.
 

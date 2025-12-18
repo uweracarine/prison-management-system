@@ -1,0 +1,27 @@
+# Environment
+.env
+.env.local
+
+# Docker
+docker-compose.override.yml
+db_data/
+
+# Node / deps
+node_modules/
+vendor/
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Misc
+*.zip
+*.tar
+
+# Ignore docker build context artifacts
+.dockerignore

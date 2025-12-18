@@ -1,9 +1,10 @@
 <?php
 // Database Configuration
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'prison_management');
+define('DB_HOST', getenv('DB_HOST') ?: 'db');
+define('DB_USER', getenv('DB_USER') ?: 'prison_user');
+define('DB_PASS', getenv('DB_PASS') ?: 'prison_pass');
+define('DB_NAME', getenv('DB_NAME') ?: 'prison_management');
+
 
 // Create database connection
 function getDBConnection() {
