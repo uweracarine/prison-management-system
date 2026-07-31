@@ -21,19 +21,19 @@ services:
       - db
     environment:
       - DB_HOST=db
-      - DB_NAME=${MYSQL_DATABASE}
-      - DB_USER=${MYSQL_USER}
-      - DB_PASS=${MYSQL_PASSWORD}
+      - DB_NAME=${MYSQL_DATABASE:-prison_management}
+      - DB_USER=${MYSQL_USER:-prison_user}
+      - DB_PASS=${MYSQL_PASSWORD:-prison_pass}
 
   db:
     image: mysql:5.7
     container_name: prison_db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_password}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-prison_management}
+      MYSQL_USER: ${MYSQL_USER:-prison_user}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-prison_pass}
     volumes:
       - db_data:/var/lib/mysql
       - ./database/schema.sql:/docker-entrypoint-initdb.d/schema.sql
@@ -54,7 +54,7 @@ services:
     environment:
       PMA_HOST: db
       PMA_USER: root
-      PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      PMA_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_password}
     depends_on:
       - db
 
