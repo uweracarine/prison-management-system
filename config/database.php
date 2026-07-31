@@ -1,8 +1,11 @@
 <?php
 // Database Configuration
-define('DB_HOST', getenv('DB_HOST') ?: 'db');
-define('DB_USER', getenv('DB_USER') ?: 'prison_user');
-define('DB_PASS', getenv('DB_PASS') ?: 'prison_pass');
+// Uses environment variables with local development fallbacks
+// In Docker: DB_HOST=db, DB_USER=prison_user, DB_PASS=prison_pass
+// In XAMPP:  DB_HOST=localhost, DB_USER=root, DB_PASS=''
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
 define('DB_NAME', getenv('DB_NAME') ?: 'prison_management');
 
 

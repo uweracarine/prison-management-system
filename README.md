@@ -96,7 +96,7 @@ A comprehensive web-based Prison Management System built with PHP, MySQL, HTML, 
 
 4. **Access the Application**
    - Start Apache and MySQL in XAMPP
-   - Navigate to: `http://localhost/BEST/login.php`
+   - Navigate to: `http://localhost/prison-management-system/login.php` or the URL where you deployed the project
 
 5. **Default Login Credentials**
    - Username: `admin`
@@ -105,7 +105,7 @@ A comprehensive web-based Prison Management System built with PHP, MySQL, HTML, 
 ## Project Structure
 
 ```
-BEST/
+prison-management-system/
 ├── api/                 # API endpoints for AJAX requests
 │   ├── inmates.php
 │   ├── staff.php

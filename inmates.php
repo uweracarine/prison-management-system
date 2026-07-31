@@ -69,12 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         $_SESSION['success'] = "Inmate added successfully!";
-header("Location: inmates.php");
-exit;
-
-
-        $stmt->close();
-        closeDBConnection($conn);
+        header("Location: inmates.php");
+        exit;
     } catch (Exception $e) {
         $message = "Error: " . $e->getMessage();
     }

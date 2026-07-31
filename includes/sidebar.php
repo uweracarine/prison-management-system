@@ -30,7 +30,7 @@
             </a></li>
             
             <li><a href="incidents.php" class="nav-link">
-                <span class="nav-icon"></span> Incidents
+                <span class="nav-icon">⚠️</span> Incidents
             </a></li>
             
             <li><a href="medical.php" class="nav-link">

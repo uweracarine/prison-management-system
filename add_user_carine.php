@@ -29,9 +29,9 @@ echo "<!DOCTYPE html>
     <div class='container'>";
 
 // Check if user already exists
+$username = "carine";
 $checkStmt = $conn->prepare("SELECT id, username, email, role FROM users WHERE username = ?");
 $checkStmt->bind_param("s", $username);
-$username = "carine";
 $checkStmt->execute();
 $result = $checkStmt->get_result();
 

@@ -3,8 +3,13 @@
 session_start();
 
 // Error reporting (disable in production)
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+if (getenv('APP_ENV') === 'production') {
+    error_reporting(0);
+    ini_set('display_errors', 0);
+} else {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+}
 
 // Timezone
 date_default_timezone_set('UTC');
@@ -15,7 +20,10 @@ define('INCLUDES_PATH', BASE_PATH . '/includes');
 define('ASSETS_PATH', BASE_PATH . '/assets');
 
 // Application URL (adjust as needed)
-define('BASE_URL', 'http://localhost/BEST/');
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+$scriptDir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+define('BASE_URL', $protocol . '://' . $host . $scriptDir . '/');
 
 // Security
 define('SESSION_TIMEOUT', 3600); // 1 hour
