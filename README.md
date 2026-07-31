@@ -221,8 +221,8 @@ docker compose up --build -d
 
 Open in your browser:
 
-- App: http://localhost:${APP_PORT:-8082}
-- phpMyAdmin: http://localhost:${PMA_PORT:-8083}
+- App: http://localhost:${APP_PORT:-8080}
+- phpMyAdmin: http://localhost:${PMA_PORT:-8081}
 
 Useful commands:
 

@@ -1,10 +1,14 @@
+# Git
+.git
+.gitignore
+
 # Environment
 .env
 .env.local
 
 # Docker
-docker-compose.override.yml
-db_data/
+docker-compose*.yml
+.dockerignore
 
 # Node / deps
 node_modules/

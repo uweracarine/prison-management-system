@@ -1,5 +1,5 @@
 <?php
-require_once 'config/config.php';
+require_once __DIR__ . '/../config/config.php';
 requireLogin();
 checkSessionTimeout();
 ?>
@@ -9,13 +9,13 @@ checkSessionTimeout();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incidents - Prison Management System</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <?php include 'includes/header.php'; ?>
+    <?php include __DIR__ . '/header.php'; ?>
     
     <div class="main-container">
-        <?php include 'includes/sidebar.php'; ?>
+        <?php include __DIR__ . '/sidebar.php'; ?>
         
         <main class="main-content">
             <div class="page-header">
@@ -119,8 +119,8 @@ checkSessionTimeout();
         </div>
     </div>
     
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/incidents.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/incidents.js"></script>
 </body>
 </html>
 
