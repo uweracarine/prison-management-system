@@ -1,6 +1,6 @@
 <?php
 // Script to add user "carine" with password "123"
-// Run this once by accessing: http://localhost/BEST/add_user_carine.php
+// Run this once by accessing: your_app_url/add_user_carine.php
 
 require_once 'config/database.php';
 

@@ -22,7 +22,7 @@
 7. Click on the `prison_management` database in the left sidebar
 8. Click on **"Import"** tab at the top
 9. Click **"Choose File"** button
-10. Navigate to: `C:\Users\hp\Desktop\xammp\htdocs\BEST\database\schema.sql`
+10. Navigate to: the `database\schema.sql` file in your project folder
 11. Click **"Go"** button at the bottom
 12. Wait for success message: "Import has been successfully finished"
 
@@ -54,8 +54,8 @@
 ### Step 4: Access the Website
 
 1. Open your web browser (Chrome, Firefox, Edge, etc.)
-2. Go to: `http://localhost/BEST/login.php`
-   - OR: `http://localhost/BEST/` (will redirect to login)
+2. Go to: `http://localhost/prison-management-system/login.php`
+   - OR: `http://localhost/prison-management-system/` (will redirect to login)
 3. You should see the login page
 
 ### Step 5: Login
@@ -75,7 +75,7 @@ After login, you'll be redirected to the dashboard!
 - Check if port 80 is already in use
 - In XAMPP Control Panel, click **Config** → **httpd.conf**
 - Change `Listen 80` to `Listen 8080` (or another port)
-- Then access: `http://localhost:8080/BEST/login.php`
+- Then access: `http://localhost:8080/prison-management-system/login.php`
 
 ### Problem: MySQL won't start
 **Solution:**
@@ -113,7 +113,7 @@ After login, you'll be redirected to the dashboard!
 - [ ] MySQL is running (green in XAMPP)
 - [ ] Database `prison_management` exists
 - [ ] All tables are created
-- [ ] Can access `http://localhost/BEST/login.php`
+- [ ] Can access `http://localhost/prison-management-system/login.php`
 - [ ] Login page displays correctly
 - [ ] Can login with admin/admin123
 - [ ] Dashboard loads after login
@@ -123,7 +123,7 @@ After login, you'll be redirected to the dashboard!
 ## Project Structure
 
 ```
-BEST/
+prison-management-system/
 ├── api/              # API endpoints
 ├── assets/           # CSS and JavaScript
 ├── config/           # Configuration files

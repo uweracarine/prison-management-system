@@ -1,6 +1,6 @@
 <?php
 // Script to check existing users in database
-// Access: http://localhost/BEST/check_users.php
+// Access: your_app_url/check_users.php
 
 require_once 'config/database.php';
 

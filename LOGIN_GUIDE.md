@@ -19,7 +19,7 @@
 ## How to Check Available Users
 
 1. **Open your browser**
-2. **Go to:** `http://localhost/BEST/check_users.php`
+2. **Go to:** `http://localhost/prison-management-system/check_users.php`
 3. **This page will show:**
    - All users in the database
    - Their usernames, emails, and roles
@@ -32,7 +32,7 @@
 ### Method 1: Using PHP Script (Easiest)
 
 1. **Open your browser**
-2. **Go to:** `http://localhost/BEST/add_user_carine.php`
+2. **Go to:** `http://localhost/prison-management-system/add_user_carine.php`
 3. **The script will:**
    - Check if user "carine" already exists
    - Create the user with password "123" if it doesn't exist
@@ -59,7 +59,7 @@
 
 ## How to Login
 
-1. **Go to:** `http://localhost/BEST/login.php`
+1. **Go to:** `http://localhost/prison-management-system/login.php`
 2. **Enter credentials:**
    - Use `admin` / `admin123` OR
    - Use `carine` / `123` (if created)
@@ -76,7 +76,7 @@
 
 ### Problem 2: User "carine" Doesn't Exist
 **Solution:**
-- Go to: `http://localhost/BEST/add_user_carine.php`
+- Go to: `http://localhost/prison-management-system/add_user_carine.php`
 - This will create the user automatically
 
 ### Problem 3: Wrong Password
@@ -106,11 +106,11 @@
    - Go to phpMyAdmin
    - Import `database/schema.sql`
 3. ✅ **Create User "carine":**
-   - Go to: `http://localhost/BEST/add_user_carine.php`
+   - Go to: `http://localhost/prison-management-system/add_user_carine.php`
 4. ✅ **Check Users:**
-   - Go to: `http://localhost/BEST/check_users.php`
+   - Go to: `http://localhost/prison-management-system/check_users.php`
 5. ✅ **Login:**
-   - Go to: `http://localhost/BEST/login.php`
+   - Go to: `http://localhost/prison-management-system/login.php`
    - Use: `admin` / `admin123` OR `carine` / `123`
 
 ---
